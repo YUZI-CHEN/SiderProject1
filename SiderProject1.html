@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>SiderProject1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<style>
+    @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+    @import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css);
+    
+    body {
+        font-family: 'Noto Sans TC', sans-serif !important;
+        font-weight: 200;
+    }
+    .box {
+        background-color: #607d8b;
+        color: #ffffff;
+        font-family: 文鼎細圓;
+    
+ 
+}    
+  
+  
+ 
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;margin:0}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+   position: relative; 
+ /* margin-left: auto;*/
+  /*margin-right: auto;*/
+  margin: 0 auto;
+  padding: 50px;
+  margin-bottom: 470px;
+}
+/*Hide the images by default*/
+.slides{
+  display: none;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+ /* user-select: none;*/
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  color: #f2f2f2;
+  padding: 10px;
+}
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/*On smaller screens,decrease text size*/
+@media Only screen and(max-width:300px) 
+{
+ .prev,.next{font-size: 11px} 
+}
+
+
+
+
+div.gallery{
+  border: 1px solid #7c939f;
+}
+div.gallery:hover{
+  border: 1px solid #777;
+}
+div.gallery img {
+  width: 100%;
+  height:auto;
+}
+div.desc{
+  padding: 40px;
+  text-align: center;
+}
+*{
+  box-sizing: border-box;
+}
+.responsive{
+  padding: 0 6px;
+  float:left;
+  width: 24.99999%;
+ 
+}
+@media only screen and(max-width:700px) {
+.responsive{
+  width: 100%;
+}
+  
+}
+@media only screen and(max-width:500px){
+  .responsive{
+    width: 100%;
+  }
+  
+}  
+.clearfix:after{
+  content:"";
+  display: table;
+  clear: both;
+}    
+</style>
+</head>
+<body>
+    
+      <div class="box" >
+      <table >
+        <tr>
+            <td width="1480"> <h2>&ensp;<img src="icon/素材/1.png"   width="50px" height="50px">&ensp;C&ensp;A&ensp;T&ensp;C&ensp;A&ensp;T</h2></td>
+            
+            <td width="100">最新消息</td>
+            <td width="100">服務據點</td>
+            <td width="100">服務項目</td>
+            <td width="100">關於我們</td>
+        
+        </tr>
+      </table>
+      </div>
+      <div class="slideshow-container">
+
+        <div class="slides">
+          <div class="slide">
+          <img src="banner/素材/1.jpg" width="1610px" height="450px">
+         
+          </div>
+        
+        <div class="slide">
+         
+          <img src="banner/素材/2.jpg" width="1610px" height="450px">
+        
+        </div>
+        
+        <div class="slide">
+         
+          <img src="banner/素材/3.jpg" width="1610px" height="450px">
+        </div>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        </div>
+        <br>
+        
+         
+        <div style="text-align:center">
+          <span class="dot" onclick="currenSlide(1)"></span> 
+          <span class="dot" onclick="currenSlide(2)"></span> 
+          <span class="dot" onclick="currenSlide(3)"></span> 
+        </div>
+        
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank">
+    <img src="card/素材/1.jpg" width="600" height="400">
+    </a>
+    <div class="desc">貓貓豆知識</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank">
+    <img src="card/素材/2.jpg" width="600" height="400">
+    </a>
+    <div class="desc">認養資訊</div>
+  </div>
+</div>
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank">
+    <img src="card/素材/3.jpg" width="600" height="400">
+    </a>
+    <div class="desc">catcat商城</div>
+  </div>
+</div>
+<div class="clearfix"></div>
+
+
+
+        <script>
+        /*let slideIndex = 0;
+        let slideIndex2=1;
+        showSlides();
+        showSlides2(showSlides2);
+
+
+        function plusSlides(n){
+          showSlides2(slideIndex2 +=n);
+        }
+        function currenSlide(n){
+          showSlides2(slideIndex2=n);
+        }
+        
+        function showSlides2(n){
+          let i;
+          let slides=document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if(n > slides.length){ slideIndex2= 1}
+          if(n<1){slideIndex2=slides.length}
+          for(i=0;i<slides.length;i++){
+            slides[i].style.display="none";
+          }
+          for(i=0;i<dots.length;i++)
+          {
+            dots[i].className=dots[i].className.replace("active","");
+          }
+          slides[slideIndex2-1].style.display="block";
+          dots[slideIndex2-1].className+="active";
+        }*/
+
+
+        /*auto
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }*/
+var slideIndex = 0;
+showSlides();
+
+
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("slide");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // 變換圖片的時間間隔（2秒）
+}
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+
+
+</script>
+
+</body>
+
+</html>
