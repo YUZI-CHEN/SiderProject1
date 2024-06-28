@@ -23,7 +23,7 @@
     body {
         
         
-      font-family: "Noto Sans TC", sans-serif;
+ font-family: "Noto Sans TC", sans-serif;
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
@@ -242,7 +242,8 @@ footer{
     letter-spacing: 3px;
     background-color: #3d5152;
     color: #a1b5be;
-    h1{
+}
+ .footerh1{
     padding: 10px;  
     font-family: "Noto Sans TC", sans-serif;
   font-optical-sizing: auto;
@@ -253,17 +254,17 @@ footer{
       text-align: center;
 
     }
-    p{
+   .footerp{
       font-family: "Noto Sans TC", sans-serif;
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
-      font-size: 1.5em;
-      text-indent: 150px; 
-      margin: 20px 0;
-      
+  font-size: 1.5em;
+    
+      margin: 20px 100px;
+      text-align:left;
     }
-}
+
 
 .social-icons{
   vertical-align:middle;
@@ -284,19 +285,36 @@ footer{
 
 
 @media (max-width: 768px) {
-  footer p{
+  .footerh1{
     
+    letter-spacing: 30px;
+    border-bottom: solid;
+  }
+  .footerp{
     
+    margin: 20px 0px;
     flex: 1;
     text-align: left;
+    font-size: 1.2em;
     
+  }
+  footer p{
+    text-indent:6.4em;
   }
   .social-icons{
   display: flex;
   
   align-items: center;
   margin-top: 10px;
-  transform: translate(0, 20%);
+  transform: translate(-5%, 10%);
+  width: 30px; /* 根据需要调整图标大小 */
+  height: 30px;
+ 
+}
+.social-icons img{
+  width: 30px; /* 根据需要调整图标大小 */
+  height: 30px;
+margin:0 7px;
 }
   
 }
@@ -417,13 +435,16 @@ footer{
 
 
 <footer>
+  <div class="footerh1">
   <h1>聯絡我們</h1>
+  </div>
+ <div class="footerp">
   
- <div>
-  <p>客服信箱&ensp;|xxxxxx@gmail.com</p>
-  <p>聯絡地址&ensp;|xxxxxxxxxxxxxxxxxxx</p> 
-  <p>客服時間&ensp;|每周一至周五。上午09:00-下午18:00</p>
+    客服信箱&ensp;|&ensp;xxxxxx@gmail.com<br>
+    聯絡地址&ensp;|&ensp;xxxxxxxxxxxxxxxxxxx<br>
+    客服時間&ensp;|&ensp;每周一至周五。<p>上午09:00-下午18:00</p>
   
+  </div>
   <div class="social-icons">
     <a href="https://www.facebook.com/groups/1612153615732604">
     <img src="icon/素材/fb.png" >
@@ -432,7 +453,7 @@ footer{
     <img src="icon/素材/ig.png" >
     </a>
   </div>
- </div>
+ 
 </footer>
 
         <script>
