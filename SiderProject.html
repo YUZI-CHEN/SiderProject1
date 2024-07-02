@@ -7,19 +7,33 @@
     <link rel="stylesheet" href="style.scss" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
+  
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+   
+  
+   
+
+   
+
+
+   
+   <script type="rwdcatProject/javascript" src="rwdcatProject.js"></script>
+
+</head>
 <style>
     @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
     @import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css);
-    
+   
     body {
         
         
@@ -29,62 +43,38 @@
   font-style: normal;
   
 }
-.navbar-custom{
-  background-color: #607d8b;
-  color:#ffffff;
+.a-color{
+            color: white; /* 设置导航栏链接文本颜色为白色 */
+            margin-right: 25px
+
+
 }
-.navbar-custom .nav-link img {
-      max-height: 40px; /* 设置图片的最大高度 */
-      margin-right: 10px;
-    }
-  /* 自定义侧边栏样式 */
-  .sidebar {
-      height: 100%;
-      width: 0;
-      position: fixed;
-      top: 0;
-      right: 0;
-      background-color: #ffffff;
-      overflow-x: hidden;
-      transition: 0.5s;
-      padding-top: 60px;
-      z-index: 1000;
-    }
+.a-size{
+  font-size: 1.5rem;
+  text-align: center;
+  padding-top: 15px; /* 设置导航栏链接的上内边距 */
+  padding-bottom: 15px;
+}
+  
+       
+        .bg-custom {
+            background-color:  #607d8b; /* 设置自定义背景颜色 */
+        }
 
-    .sidebar a {
-      padding: 20px 32px 8px 32px;
-      text-decoration: none;
-      font-size: 25px;
-      color: black;
-      display: block;
-      transition: 0.3s;
-    }
 
-    .sidebar a:hover {
-      color:  #607d8b;
-    }
+    .move-right {
+            transform: translateX(1300px); /* 向右移动50像素 */
+          
+        }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+            /* 将汉堡菜单图标颜色设置为白色 */
+        }
 
-    .sidebar .closebtn {
-      position: absolute;
-      top: 20px;
-      right: 25px;
-      font-size: 36px;
-      margin-left: 50px;
-    }
 
-    .openbtn {
-      font-size: 20px;
-      cursor: pointer;
-      background-color:#607d8b;
 
-      color: #ffffff;
-      padding: 10px 15px;
-      border: none;
-    }
 
-    .openbtn:hover {
-      background-color: #444;
-    }
+
 
 
 /*Manual Slideshow*/
@@ -264,7 +254,11 @@ footer{
       margin: 20px 100px;
       text-align:left;
     }
+.mainfoooterP{
 
+  font-size: 1.7em;
+  transform: translateX(100px);
+}
 
 .social-icons{
   vertical-align:middle;
@@ -319,65 +313,91 @@ margin:0 7px;
   
 }
 </style>
-</head>
+
 <body>
     
     <!-- 顶部导航栏 -->
-<nav class="navbar navbar-expand-1g navbar-custom">
-  <a class="navbar-brand d-flex align-items-center" href="#" ><img src="icon/素材/1.png">CATCAT</a>
-  <div class="d-lg-none">
-    <button class="openbtn" onclick="openNav()">☰</button>
-  </div>
-  <div class="collapse navbar-collapse d-none d-lg-flex position-absolute top-0 end-0 ">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link " href="#news">最新消息</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#contact">服務據點</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#about">服務項目</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#about">關於我們</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<!-- 侧边栏 -->
-<div id="mySidebar" class="sidebar">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-  <a href="#news">最新消息</a>
-  <a href="#contact">服務據點</a>
-  <a href="#about">服務項目</a>
-  <a href="#about">關於我們</a>
-</div>
-
-     
-      
-      
-      <div class="w3-content w3-display-container hide-on-small" style="max-width:1610px" id="Mainslider">
-        <div class="position">
-        <img class="mySlides" src="banner/素材/1.jpg" width="1610px" height="450px">
-        <img class="mySlides" src="banner/素材/2.jpg" width="1610px" height="450px">
-        <img class="mySlides" src="banner/素材/3.jpg" width="1610px" height="450px">
-      
-      
-        <button class="w3-button w3-black w3-display-left hide-on-small" onclick="plusDivs(-1)">&#10094;</button>
-        <button class="w3-button w3-black w3-display-right hide-on-small" onclick="plusDivs(1)">&#10095;</button>
+    <nav class="navbar navbar-expand-lg  hide-on-small bg-custom">
+      <a class="navbar-brand a-color " href="#" >
+        <img src="icon/素材/1.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+        CATCAT
+      </a>
+        <div class="d-flex move-right " >
+          <ul class="navbar-nav ">
+            <li class="nav-item ">
+              <a class="nav-link a-color " href="#">最新消息</a>
+            </li>
+            <li class="nav-item " >
+              <a class="nav-link a-color " href="#">服務據點</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link a-color " href="#">服務項目</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link a-color " href="#">關於我們</a>
+            </li>
+          </ul>
         </div>
       </div>
+    </nav>
+    <nav class="navbar navbar-light  fixed-top show-on-small bg-custom">
+      <div class="container-fluid">
+        <a class="navbar-brand a-color" href="#">
+          <img src="icon/素材/1.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+          CATCAT</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active a-size" aria-current="page" href="#">最新消息</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link a-size" href="#">服務據點</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link a-size" href="#">服務項目</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link a-size" href="#">關於我們</a>
+              </li>
+            
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+
+
+    <div class="w3-content w3-display-container hide-on-small" style="max-width:1610px" id="Mainslider">
+      <div class="position">
+      <img class="mySlides" src="banner/素材/1.jpg" width="1610px" height="450px">
+      <img class="mySlides" src="banner/素材/2.jpg" width="1610px" height="450px">
+      <img class="mySlides" src="banner/素材/3.jpg" width="1610px" height="450px">
+    
+    
+      <button class="w3-button w3-black w3-display-left hide-on-small" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="w3-button w3-black w3-display-right hide-on-small" onclick="plusDivs(1)">&#10095;</button>
+      </div>
+    </div>
+      
+      
+    
       <!--slider2-->
       <div  class="container show-on-small " >
         <div class="carousel slide" data-ride="carousel" id="carouselExampleControls">
         
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleControls" data-slide-to="1"></li>
-          <li data-target="#carouselExampleControls" data-slide-to="2"></li>
-        </ol>
+       
         <div class="carousel-inner ">
           <div class="carousel-item active  style=width: 60%;">
             <img src="banner/RWD素材/1-03.jpg" class=" imgsize " alt="...">
@@ -438,13 +458,23 @@ margin:0 7px;
   <div class="footerh1">
   <h1>聯絡我們</h1>
   </div>
- <div class="footerp">
+ <div class="footerp  show-on-small">
   
     客服信箱&ensp;|&ensp;xxxxxx@gmail.com<br>
     聯絡地址&ensp;|&ensp;xxxxxxxxxxxxxxxxxxx<br>
     客服時間&ensp;|&ensp;每周一至周五。<p>上午09:00-下午18:00</p>
   
   </div>
+
+  <div class="mainfoooterP hide-on-small">
+  
+    客服信箱&ensp;|&ensp;xxxxxx@gmail.com<br>
+    聯絡地址&ensp;|&ensp;xxxxxxxxxxxxxxxxxxx<br>
+    客服時間&ensp;|&ensp;每周一至周五。上午09:00-下午18:00
+  
+  </div>
+
+
   <div class="social-icons">
     <a href="https://www.facebook.com/groups/1612153615732604">
     <img src="icon/素材/fb.png" >
@@ -456,9 +486,8 @@ margin:0 7px;
  
 </footer>
 
-        <script>
-        
-        var slideIndex = 1;
+<script>
+      var slideIndex = 1;
 showDivs(slideIndex);
 
 function plusDivs(n) {
@@ -499,17 +528,14 @@ function toggleMenu() {
         x.className = "topnav";
       }
     }
-</script>
-<!-- Bootstrap和jQuery -->
 
 
 
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<script>
+
+
 function openNav() {
   document.getElementById("mySidebar").style.width = "250px";
 }
@@ -517,19 +543,15 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
 }
-</script>
 
 
-<script>
+
 $('.carousel').carousel({
  interval: 2000,
  
 })
 
-
-
-
-</script>
+</Script>
 </body>
 
 </html>
