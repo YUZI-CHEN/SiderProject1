@@ -1,6 +1,5 @@
 
-        
-  var slideIndex = 1;
+ var slideIndex = 1;
 showDivs(slideIndex);
 
 function plusDivs(n) {
@@ -37,13 +36,9 @@ function carousel() {
 
 
 
-function openNav() {
-  document.getElementById("mySidebar").style.width = "250px";
-}
 
-function closeNav() {
-  document.getElementById("mySidebar").style.width = "0";
-}
+
+
 
 
 
