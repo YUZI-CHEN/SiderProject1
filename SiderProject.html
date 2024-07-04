@@ -2,15 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>SiderProject1</title>
+    <title>SiderProject</title>
     
-    <link rel="stylesheet" href="style.scss" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
    
-    
-  
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+   
    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   
@@ -20,14 +19,14 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
    
-  
+   
    
 
    
 
 
    
-   <script type="rwdcatProject/javascript" src="rwdcatProject.js"></script>
+   <script type="text/javascript" src="rwdcatProject.js"></script>
 
 </head>
 <style>
@@ -45,7 +44,7 @@
 }
 .a-color{
             color: white; /* 设置导航栏链接文本颜色为白色 */
-            margin-right: 25px
+            margin-right: 30px
 
 
 }
@@ -56,26 +55,28 @@
   padding-bottom: 15px;
 }
   
-       
+.nav-a{
+  font-size: 1.2rem;
+
+}   
+.nav-icon-size
+{
+  font-size: 1.5rem;
+
+}
         .bg-custom {
             background-color:  #607d8b; /* 设置自定义背景颜色 */
         }
 
 
     .move-right {
-            transform: translateX(1300px); /* 向右移动50像素 */
+            transform: translateX(1210px); /* 向右移动50像素 */
           
         }
         .navbar-toggler-icon {
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
             /* 将汉堡菜单图标颜色设置为白色 */
         }
-
-
-
-
-
-
 
 /*Manual Slideshow*/
 .mySlides {display:none;}
@@ -157,7 +158,6 @@ text-overflow: ellipsis;
   display: table;
   clear: both;
 }   
-
 
 
   
@@ -318,23 +318,23 @@ margin:0 7px;
     
     <!-- 顶部导航栏 -->
     <nav class="navbar navbar-expand-lg  hide-on-small bg-custom">
-      <a class="navbar-brand a-color " href="#" >
-        <img src="icon/素材/1.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
-        CATCAT
+      <a class="navbar-brand a-color nav-icon-size " href="#" >
+        <img src="icon/素材/1.png" alt="" width="40" height="30" class="d-inline-block align-text-top">
+        C&ensp;A&ensp;T&ensp;C&ensp;A&ensp;T
       </a>
         <div class="d-flex move-right " >
           <ul class="navbar-nav ">
             <li class="nav-item ">
-              <a class="nav-link a-color " href="#">最新消息</a>
+              <a class="nav-link a-color nav-a" href="#">最新消息</a>
             </li>
             <li class="nav-item " >
-              <a class="nav-link a-color " href="#">服務據點</a>
+              <a class="nav-link a-color nav-a" href="#">服務據點</a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link a-color " href="#">服務項目</a>
+              <a class="nav-link a-color nav-a" href="#">服務項目</a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link a-color " href="#">關於我們</a>
+              <a class="nav-link a-color nav-a" href="#">關於我們</a>
             </li>
           </ul>
         </div>
@@ -344,7 +344,7 @@ margin:0 7px;
       <div class="container-fluid">
         <a class="navbar-brand a-color" href="#">
           <img src="icon/素材/1.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
-          CATCAT</a>
+          C&ensp;A&ensp;T&ensp;C&ensp;A&ensp;T</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -373,12 +373,6 @@ margin:0 7px;
       </div>
     </nav>
 
-
-
-
-
-
-
     <div class="w3-content w3-display-container hide-on-small" style="max-width:1610px" id="Mainslider">
       <div class="position">
       <img class="mySlides" src="banner/素材/1.jpg" width="1610px" height="450px">
@@ -390,7 +384,6 @@ margin:0 7px;
       <button class="w3-button w3-black w3-display-right hide-on-small" onclick="plusDivs(1)">&#10095;</button>
       </div>
     </div>
-      
       
     
       <!--slider2-->
@@ -486,72 +479,7 @@ margin:0 7px;
  
 </footer>
 
-<script>
-      var slideIndex = 1;
-showDivs(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
-
-var myIndex = 0;
-carousel();
-
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 2000); // Change image every 2 seconds
-}
-
-function toggleMenu() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
-
-
-
-
-
-
-
-
-function openNav() {
-  document.getElementById("mySidebar").style.width = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidebar").style.width = "0";
-}
-
-
-
-$('.carousel').carousel({
- interval: 2000,
- 
-})
-
-</Script>
 </body>
 
 </html>
