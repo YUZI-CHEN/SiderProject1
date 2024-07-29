@@ -14,6 +14,7 @@
             padding: 8px;
             text-align: left;
             border: 1px solid #ddd;
+            white-space: nowrap; /* 防止文本换行 */
         }
         th {
             background-color: #f2f2f2;
@@ -30,9 +31,19 @@
             background-color: #f2f2f2;
             cursor: pointer;
         }
-        .pagination button.active {
-            background-color: #ddd;
+        .pagination button.disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
         }
+        /* 固定每列的宽度 */
+        th:nth-child(1), td:nth-child(1) { width: 100px; } /* 影片編號 */
+        th:nth-child(2), td:nth-child(2) { width: 200px; } /* 影片名稱 */
+        th:nth-child(3), td:nth-child(3) { width: 100px; } /* 片長 */
+        th:nth-child(4), td:nth-child(4) { width: 150px; } /* 影片分類 */
+        th:nth-child(5), td:nth-child(5) { width: 250px; } /* 影片簡介 */
+        th:nth-child(6), td:nth-child(6) { width: 150px; } /* 授權單位 */
+        th:nth-child(7), td:nth-child(7) { width: 200px; } /* Youtube連結 */
+        th:nth-child(8), td:nth-child(8) { width: 100px; } /* ID */
     </style>
     <script>
         $(document).ready(function() {
@@ -41,65 +52,57 @@
             var data = [];
 
             function renderTable(page) {
-                //獲取表格裡的jQuery對象
                 var tableBody = $('#dataTable tbody');
                 tableBody.empty(); // 清空表格
 
-               //計算當前頁的起始索引和結束索引
                 var startIndex = (page - 1) * itemsPerPage;
                 var endIndex = Math.min(startIndex + itemsPerPage, data.length);
-               //遍歷數據，從起始索引到結束索引，逐漸添加到表格中
+
                 for (var i = startIndex; i < endIndex; i++) {
                     var item = data[i];
-                    //創建一個新的表格行
                     var row = $('<tr></tr>');
-                    // 添加影片編輯的單元格
                     row.append($('<td></td>').text(item.影片編號));
-                    // 添加影片名稱的單元格 
                     row.append($('<td></td>').text(item.影片名稱));
-                    // 添加片長的單元格 
                     row.append($('<td></td>').text(item.片長));
-                    // 根據你的數據添加更多欄位
-                    // 將創建好的添加到表格內
+                    row.append($('<td></td>').text(item.影片分類));
+                    row.append($('<td></td>').text(item.影片簡介));
+                    row.append($('<td></td>').text(item.授權單位));
+                    row.append($('<td></td>').text(item.Youtube連結));
+                    row.append($('<td></td>').text(item.ID));
                     tableBody.append(row);
                 }
-                //  分頁按鈕
+
                 renderPagination();
             }
 
-     function renderPagination() {
-            // 獲取分頁容器的jQuery對象   
+            function renderPagination() {
                 var pagination = $('.pagination');
                 pagination.empty();
-                // 計算總頁數
+
                 var totalPages = Math.ceil(data.length / itemsPerPage);
-            //    創建上一頁按鈕
+
                 var prevButton = $('<button></button>').text('上一頁');
                 if (currentPage === 1) {
-                    // 如果當前頁是第一頁，不能用上一頁按鈕
                     prevButton.addClass('disabled');
                 } else {
-                    // 否則給上一頁按鈕添加點擊事件，點擊時跳到前一頁
                     prevButton.on('click', function() {
                         currentPage--;
                         renderTable(currentPage);
                     });
                 }
-            //   創建下一頁按鈕
+
                 var nextButton = $('<button></button>').text('下一頁');
                 if (currentPage === totalPages) {
-                    // 如果當前頁為最後一頁禁用下一頁按鈕
                     nextButton.addClass('disabled');
                 } else {
-                    // 否則點擊下一頁按鈕進入下一頁
                     nextButton.on('click', function() {
                         currentPage++;
                         renderTable(currentPage);
                     });
                 }
-            //    創建頁碼訊息顯示
+
                 var pageInfo = $('<span></span>').addClass('page-info').text('第 ' + currentPage + ' 頁，共 ' + totalPages + ' 頁');
-            //   將上一頁按鈕、頁碼訊息和下一頁按鈕添加到分頁物件裡
+
                 pagination.append(prevButton);
                 pagination.append(pageInfo);
                 pagination.append(nextButton);
@@ -110,13 +113,11 @@
                 url: 'https://data.moa.gov.tw/service/opendata/VirtualMuseumAgri.aspx?IsTransData=1&UnitId=382',
                 dataType: 'json',
                 success: function(responseData) {
-                    // 在這裡處理成功的結果
                     console.log(responseData);
                     data = responseData;
                     renderTable(currentPage);
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
-                    // 在這裡處理錯誤
                     console.error('Error: ' + textStatus, errorThrown);
                 }
             });
@@ -130,7 +131,11 @@
                 <th>影片編號</th>
                 <th>影片名稱</th>
                 <th>片長</th>
-                <!-- 根據你的數據添加更多標題 -->
+                <th>影片分類</th>
+                <th>影片簡介</th>
+                <th>授權單位</th>
+                <th>Youtube連結</th>
+                <th>ID</th>            
             </tr>
         </thead>
         <tbody>
