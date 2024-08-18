@@ -67,8 +67,8 @@
                     row.append($('<td></td>').text(item.影片分類));
                     row.append($('<td></td>').text(item.影片簡介));
                     row.append($('<td></td>').text(item.授權單位));
-                     var youtubeLink = $('<a></a>').attr('href', item.Youtube連結).attr('target', '_blank').text(item.Youtube連結);
-                    row.append($('<td></td>').text(item.Youtube連結));
+                    var youtubeLink = $('<a></a>').attr('href', item.Youtube連結).attr('target', '_blank').text(item.Youtube連結);
+                    row.append($('<td></td>').append(youtubeLink));
                 
                     tableBody.append(row);
                 }
